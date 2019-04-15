@@ -6,7 +6,13 @@
 
 The application written in [TypeScript](https://www.typescriptlang.org/) exposes a REST endpoint to greet people by their name.
 
-## Scripts
+### What's included?
+
+- [Fastify](https://www.fastify.io/) web framework
+- [Prettier](https://prettier.io/) for code formatting
+- [Husky](https://github.com/typicode/husky#readme) and [lint-staged](https://github.com/okonet/lint-staged) to trigger Prettier formatting before commit
+
+### Scripts
 
 - `clean`: Remove generated files
 - `format`: Format files with [Prettier](https://prettier.io/)
