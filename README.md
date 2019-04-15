@@ -1,6 +1,6 @@
 # TypeScript & Docker Multi-stage ✨ 🐳
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
+[![Build Status](https://travis-ci.com/kevinpollet/typescript-multistage-docker.svg?branch=master)](https://travis-ci.com/kevinpollet/typescript-multistage-docker) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
 
 ## App
 
