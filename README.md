@@ -9,6 +9,7 @@ The application written in [TypeScript](https://www.typescriptlang.org/) exposes
 ### What's included?
 
 - [Fastify](https://www.fastify.io/) web framework
+- [Jest](https://jestjs.io/) testing framework
 - [Prettier](https://prettier.io/) for code formatting
 - [Husky](https://github.com/typicode/husky#readme) and [lint-staged](https://github.com/okonet/lint-staged) to trigger Prettier formatting before commit
 
@@ -17,8 +18,9 @@ The application written in [TypeScript](https://www.typescriptlang.org/) exposes
 - `clean`: Remove generated files
 - `format`: Format files with [Prettier](https://prettier.io/)
 - `build`: Compile TypeScript sources
-- `start`: Start application
-- `start:watch`: Start application with Hot Reload
+- `start`: Compile and start application
+- `start:watch`: Compile and start application with Hot Reload
+- `test`: Run tests with [Jest](https://jestjs.io/)
 
 ## Build & Run Docker image
 

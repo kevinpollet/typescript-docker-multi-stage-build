@@ -17,15 +17,16 @@
   "bugs": {
     "url": "https://github.com/kevinpollet/typescript-multistage-docker/issues"
   },
+  "main": "lib/server.js",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "clean": "rimraf lib",
-    "format": "prettier --write '*.{yml,json,md}' 'src/**/*.ts'",
+    "clean": "rimraf lib coverage",
+    "format": "prettier --write '*.{yml,json,md}' '{src,test}/**/*.ts'",
     "prebuild": "run-s clean",
     "prestart": "run-s build",
     "prestart:watch": "run-s build",
-    "start": "node lib/server.js",
-    "start:watch": "tsc-watch --onSuccess 'node lib/server.js'",
+    "start": "node .",
+    "start:watch": "tsc-watch --onSuccess 'node .'",
     "test": "jest --coverage --collectCoverageFrom='src/**/*.ts'"
   },
   "dependencies": {
