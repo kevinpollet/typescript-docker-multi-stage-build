@@ -26,7 +26,7 @@ The application written in [TypeScript](https://www.typescriptlang.org/) exposes
 
 To build the Docker image use the following command:
 
-> The build Docker process will first compile the TypeScript application and copy the result in the final image. Read https://docs.docker.com/develop/develop-images/multistage-build/ for more details.
+> The build Docker process will run the tests and compile the TypeScript application. In the next step, compiled sources will be copied to the final image. Read https://docs.docker.com/develop/develop-images/multistage-build/ and see [Dockerfile](./Dockerfile) for more details.
 
 ```shell
 $ docker build . -t greeting-service:latest
