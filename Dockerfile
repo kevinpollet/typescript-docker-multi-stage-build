@@ -9,6 +9,8 @@ RUN npm run build
 FROM node:10.15-alpine
 RUN apk add --no-cache tini
 WORKDIR /usr/src/app
+RUN chown -R node:node .
+USER node
 COPY package*.json ./
 RUN npm install --production
 COPY --from=build /usr/src/app/lib lib/
