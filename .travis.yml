@@ -3,3 +3,5 @@ script:
   - docker build . -t greeting-service:latest
 services:
   - docker
+notifications:
+  email: false
