@@ -1,6 +1,19 @@
 # TypeScript & Docker Multi-stage ✨ 🐳
 
-## Build and Run Docker image
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
+
+## App
+
+The application written in [TypeScript](https://www.typescriptlang.org/) exposes a REST endpoint to greet people by their name.
+
+## Scripts
+
+- `clean`: Remove generated files
+- `build`: Compile TypeScript sources
+- `start`: Start application
+- `start:watch`: Start application with Hot Reload
+
+## Build & Run Docker image
 
 To build the Docker image use the following command:
 
