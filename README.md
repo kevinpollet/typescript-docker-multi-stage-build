@@ -9,6 +9,7 @@ The application written in [TypeScript](https://www.typescriptlang.org/) exposes
 ## Scripts
 
 - `clean`: Remove generated files
+- `format`: Format files with [Prettier](https://prettier.io/)
 - `build`: Compile TypeScript sources
 - `start`: Start application
 - `start:watch`: Start application with Hot Reload
