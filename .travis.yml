@@ -1,0 +1,5 @@
+language: shell
+script:
+  - docker build . -t greeting-service:latest
+services:
+  - docker
