@@ -47,4 +47,4 @@ $ curl http://localhost:3000/greeting?name=Moby%20Dock
 
 ## License
 
-[MIT licensed](./LICENSE.md).
+[MIT](./LICENSE.md)
