@@ -1,4 +1,4 @@
-FROM node:10.15-alpine as build
+FROM node:10.15-alpine as builder
 WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm ci
@@ -16,6 +16,6 @@ RUN chown -R node:node .
 USER node
 COPY package*.json ./
 RUN npm install
-COPY --from=build /usr/src/app/lib lib/
+COPY --from=builder /usr/src/app/lib lib/
 EXPOSE 3000
 ENTRYPOINT [ "/sbin/tini","--", "node", "lib/server.js" ]
