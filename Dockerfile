@@ -1,4 +1,4 @@
-FROM node:10.15-alpine as builder
+FROM node:12-alpine as builder
 WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm ci
@@ -8,7 +8,7 @@ COPY test test
 RUN npm run test
 RUN npm run build
 
-FROM node:10.15-alpine
+FROM node:12-alpine
 ENV NODE_ENV=production
 RUN apk add --no-cache tini
 WORKDIR /usr/src/app

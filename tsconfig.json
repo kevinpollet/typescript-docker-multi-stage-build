@@ -1,9 +1,9 @@
 {
   "extends": "@kevinpollet/tsconfig",
   "compilerOptions": {
-    "lib": ["es2018"],
+    "lib": ["es2019"],
     "outDir": "lib",
-    "target": "es2018" // Node 10
+    "target": "es2019" // Node 12
   },
   "include": ["src"]
 }
