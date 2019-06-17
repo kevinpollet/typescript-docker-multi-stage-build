@@ -1,6 +1,4 @@
-# TypeScript & Docker Multi-stage ✨ 🐳
-
-[![Build Status](https://travis-ci.com/kevinpollet/typescript-multistage-docker.svg?branch=master)](https://travis-ci.com/kevinpollet/typescript-multistage-docker) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
+# TypeScript ❤️ Docker Multi-stage &middot; [![Build Status](https://travis-ci.com/kevinpollet/typescript-multistage-docker.svg?branch=master)](https://travis-ci.com/kevinpollet/typescript-multistage-docker) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
 
 ## App
 
@@ -47,4 +45,4 @@ $ curl http://localhost:3000/greeting?name=Moby%20Dock
 
 ## License
 
-[MIT](./LICENSE.md)
+[MIT](./LICENSE.md) © kevinpollet
