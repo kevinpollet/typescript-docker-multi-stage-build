@@ -5,7 +5,7 @@
  * found in the LICENSE.md file.
  */
 
-import { GreetingService } from "../../src/services/GreetingService";
+import { GreetingService } from "../src/GreetingService";
 
 describe("GreetingService", () => {
   const greetingService = new GreetingService();

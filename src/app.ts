@@ -6,7 +6,7 @@
  */
 
 import fastify from "fastify";
-import { GreetingService } from "./services/GreetingService";
+import { GreetingService } from "./GreetingService";
 
 const greetingService = new GreetingService();
 
