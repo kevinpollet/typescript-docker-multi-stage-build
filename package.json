@@ -5,11 +5,6 @@
   "author": "kevinpollet <pollet.kevin@gmail.com>",
   "license": "MIT",
   "private": true,
-  "keywords": [
-    "typescript",
-    "greeting-service",
-    "fastify"
-  ],
   "bugs": "https://github.com/kevinpollet/typescript-multistage-docker/issues",
   "homepage": "https://github.com/kevinpollet/typescript-multistage-docker#readme",
   "repository": "github:kevinpollet/typescript-multistage-docker",
