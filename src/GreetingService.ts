@@ -6,25 +6,21 @@
  */
 
 export class GreetingService {
-  private readonly cats: string[];
-
-  constructor() {
-    this.cats = [
-      "(≈චᆽච≈)",
-      "(=◕ᆽ◕ฺ=)",
-      "(≈ㅇᆽㅇ≈)♡",
-      "(=චﻌච=)",
-      "(=✖ᆽ✖=)",
-      "(=✪ᆽ✪=)",
-    ];
-  }
+  private static readonly WHALES: ReadonlyArray<string> = [
+    ". ><{{{.______)",
+    ". ><{{{o ______)",
+    ". ><{{{x_______)",
+    ". ><(((.______)",
+    ". ><(((o ______)",
+    ". ><(((x_______)",
+  ];
 
   sayHello(name?: string): string {
-    return `Hello ${name || "World"}!! ${this.getRandomCat()}`;
+    return `Hello ${name || "World"}!! ${this.getRandomWhale()}`;
   }
 
-  private getRandomCat() {
-    const index = Math.floor(Math.random() * this.cats.length);
-    return this.cats[index];
+  private getRandomWhale() {
+    const index = Math.floor(Math.random() * GreetingService.WHALES.length);
+    return GreetingService.WHALES[index];
   }
 }
