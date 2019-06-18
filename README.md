@@ -42,6 +42,12 @@ $ curl http://localhost:3000/greeting?name=Moby%20Dock
 {"message":"Hello Moby Dock!! (=චﻌච=)"}
 ```
 
+## Contributing
+
+Contributions are very welcome!
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for more information and how to get started.
+
 ## License
 
 [MIT](./LICENSE.md) © kevinpollet
