@@ -1,46 +1,45 @@
-# TypeScript ❤️ Docker Multi-stage &middot; [![Build Status](https://travis-ci.com/kevinpollet/typescript-multistage-docker.svg?branch=master)](https://travis-ci.com/kevinpollet/typescript-multistage-docker) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
+# TypeScript ❤️ Docker multi-stage &middot; [![Build Status](https://travis-ci.com/kevinpollet/typescript-multistage-docker.svg?branch=master)](https://travis-ci.com/kevinpollet/typescript-multistage-docker) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
 
-## App
+## Application
 
-The application written in [TypeScript](https://www.typescriptlang.org/) exposes a REST endpoint to greet people by their name.
+This application is written in [TypeScript](https://www.typescriptlang.org/) and expose a REST endpoint to greet people by their name. Here is an example of a REST API call with [curl](https://github.com/curl/curl).
 
-### What's included?
+```shell
+$ curl http://localhost:3000/greeting\?name\=Moby%20Dock
 
-- [Fastify](https://www.fastify.io/) web framework
-- [Jest](https://jestjs.io/) testing framework
-- [Prettier](https://prettier.io/) for code formatting
-- [Husky](https://github.com/typicode/husky#readme) and [lint-staged](https://github.com/okonet/lint-staged) to trigger Prettier formatting before commit
+{"message":"Hello Moby Dock!! . ><{{{o ______)"}
+```
 
-### Scripts
+### npm scripts
 
 - `format`: Format files with [Prettier](https://prettier.io/)
-- `build`: Compile TypeScript sources
-- `start`: Compile and start application
-- `start:watch`: Compile and start application with Hot Reload
+- `build`: Transpile TypeScript sources
+- `start`: Start app
+- `start:watch`: Start app with Hot Reload
 - `test`: Run tests with [Jest](https://jestjs.io/)
 
 ## Build & Run Docker image
 
-To build the Docker image use the following command:
-
-> The build Docker process will run the tests and compile the TypeScript application. In the next step, compiled sources will be copied to the final image. Read https://docs.docker.com/develop/develop-images/multistage-build/ and [Dockerfile](./Dockerfile) for more details.
+Build the Docker image with the following command:
 
 ```shell
 $ docker build . -t greeting-service:latest
 ```
 
-To run the resulting Docker image you can use the following command:
+Multi-stage build process:
+
+1. TypeScript application sources are transpiled and tested
+2. Transpiled application sources are copied in the final image
+
+> Read https://docs.docker.com/develop/develop-images/multistage-build/ for more details.
+
+Run the Docker image with the following command:
 
 ```shell
 $ docker run -p 3000:3000 --rm greeting-service:latest
 ```
 
-You can now call the Dockerized greeting service with the following command:
-
-```shell
-$ curl http://localhost:3000/greeting?name=Moby%20Dock
-{"message":"Hello Moby Dock!! (=චﻌච=)"}
-```
+Now you can call the running greeting service (see the [Application](#application) section for more details).
 
 ## Contributing
 
