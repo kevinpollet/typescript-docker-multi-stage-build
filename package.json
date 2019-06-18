@@ -23,7 +23,7 @@
     "prestart:watch": "run-s build",
     "start": "node .",
     "start:watch": "tsc-watch --onSuccess 'node .'",
-    "test": "jest --preset ts-jest --coverage --collectCoverageFrom='src/**/*.ts'"
+    "test": "jest --preset ts-jest"
   },
   "dependencies": {
     "fastify": "2.5.0"
