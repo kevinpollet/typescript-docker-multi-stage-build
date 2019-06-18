@@ -5,5 +5,5 @@
     "outDir": "lib",
     "target": "es2019" // Node 12
   },
-  "include": ["src"]
+  "include": ["src", "test"]
 }

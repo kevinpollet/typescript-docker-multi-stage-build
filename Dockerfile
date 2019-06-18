@@ -2,11 +2,11 @@ FROM node:12-alpine as builder
 WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm ci
-COPY tsconfig.json .
+COPY tsconfig*.json ./
 COPY src src
 COPY test test
-RUN npm run test
-RUN npm run build
+RUN npm run test &&\
+  npm run build
 
 FROM node:12-alpine
 ENV NODE_ENV=production
