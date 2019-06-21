@@ -1,4 +1,4 @@
-# TypeScript ❤️ Docker multi-stage &middot; [![Build Status](https://travis-ci.com/kevinpollet/typescript-multistage-docker.svg?branch=master)](https://travis-ci.com/kevinpollet/typescript-multistage-docker) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
+# TypeScript ❤️ Docker multi-stage &middot; [![Build Status](https://travis-ci.com/kevinpollet/typescript-docker-multi-stage-build.svg?branch=master)](https://travis-ci.com/kevinpollet/typescript-docker-multi-stage-build) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
 
 ## Application
 
