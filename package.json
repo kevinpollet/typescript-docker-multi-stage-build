@@ -19,7 +19,7 @@
     "test": "jest --preset ts-jest"
   },
   "dependencies": {
-    "fastify": "2.6.0"
+    "fastify": "2.7.0"
   },
   "devDependencies": {
     "@kevinpollet/tsconfig": "0.1.0",
