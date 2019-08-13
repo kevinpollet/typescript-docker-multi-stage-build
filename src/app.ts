@@ -12,9 +12,8 @@ const greetingService = new GreetingService();
 
 const app = fastify({ logger: true }).get("/greeting", async req => {
   const { name } = req.query;
-  const message = greetingService.sayHello(name);
 
-  return { message };
+  return greetingService.greet(name);
 });
 
 export { app };

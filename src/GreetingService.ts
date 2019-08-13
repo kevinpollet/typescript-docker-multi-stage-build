@@ -5,22 +5,13 @@
  * found in the LICENSE.md file.
  */
 
+import { v4 } from "uuid";
+
 export class GreetingService {
-  private static readonly WHALES: ReadonlyArray<string> = [
-    ". ><{{{.______)",
-    ". ><{{{o ______)",
-    ". ><{{{x_______)",
-    ". ><(((.______)",
-    ". ><(((o ______)",
-    ". ><(((x_______)",
-  ];
-
-  sayHello(name?: string): string {
-    return `Hello ${name || "World"}!! ${this.getRandomWhale()}`;
-  }
-
-  private getRandomWhale() {
-    const index = Math.floor(Math.random() * GreetingService.WHALES.length);
-    return GreetingService.WHALES[index];
+  greet(name: string = "World") {
+    return {
+      id: v4(),
+      message: `Hello, ${name}!`,
+    };
   }
 }

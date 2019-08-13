@@ -10,17 +10,20 @@ import { GreetingService } from "../src/GreetingService";
 describe("GreetingService", () => {
   const greetingService = new GreetingService();
 
-  describe("sayHello", () => {
-    it("should say Hello to the given name", () => {
-      const message = greetingService.sayHello("Moby Dock");
+  describe("greet", () => {
+    it("should greet the given name", () => {
+      const name = "Moby Dock";
+      const greeting = greetingService.greet(name);
 
-      expect(message.startsWith("Hello Moby Dock")).toBeTruthy;
+      expect(greeting.id).not.toBeNull();
+      expect(greeting.message).toEqual(`Hello, ${name}!`);
     });
 
-    it("should say Hello World if the given name is undefined", () => {
-      const message = greetingService.sayHello();
+    it("should greet the World if the given name is undefined", () => {
+      const greeting = greetingService.greet();
 
-      expect(message.startsWith("Hello World")).toBeTruthy;
+      expect(greeting.id).not.toBeNull();
+      expect(greeting.message).toEqual(`Hello, World!`);
     });
   });
 });
