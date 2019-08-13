@@ -1,6 +1,6 @@
 # typescript-docker-multi-stage-build &middot; [![Build Status](https://github.com/kevinpollet/typescript-docker-multi-stage-build/workflows/Build%20%26%20Test/badge.svg)](https://github.com/kevinpollet/typescript-docker-multi-stage-build/actions) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
 
-The main purpose of this repository is to show how you can use the [Docker multi-stage][1] feature, available since Docker 17.05, to build a Node.js app written in TypeScript with Docker.
+The purpose of this repository is to show how you can build a Docker image for a Node.js + TypeScript app with the [Docker multi-stage][1] feature, available since version 17.05.
 
 ## Starting the app
 
@@ -21,7 +21,7 @@ To build the Docker image, use the `build` command:
 $ docker build . -t greeting-service:latest
 ```
 
-To stop the build on a specific stage, use the `target` option in the `build` command:
+To stop the build on a specific stage, use the `target` option:
 
 ```shell
 $ docker build --target builder -t greeting-service:latest .
@@ -44,12 +44,14 @@ $ curl http://localhost:3000/greeting\?name\=Docker
 
 ## Contributing
 
-Contributions are very welcome!
+Contributions are welcome!
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md) for more information and how to get started.
+Submit an [issue][2] or a [pull request][3] if you want to contribute some code.
 
 ## License
 
 [MIT](./LICENSE.md) © kevinpollet
 
 [1]: https://docs.docker.com/develop/develop-images/multistage-build/
+[2]: https://github.com/kevinpollet/typescript-docker-multi-stage-build/issues/new
+[3]: https://github.com/kevinpollet/typescript-docker-multi-stage-build/pulls
