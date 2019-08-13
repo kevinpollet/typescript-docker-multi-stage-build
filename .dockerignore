@@ -1,6 +1,5 @@
 *
 !src/
-!test/
 !tsconfig.json
 !tsconfig.build.json
 !package.json
