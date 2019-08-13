@@ -8,7 +8,6 @@
   "bugs": "https://github.com/kevinpollet/typescript-docker-multi-stage-build/issues",
   "homepage": "https://github.com/kevinpollet/typescript-docker-multi-stage-build#readme",
   "repository": "github:kevinpollet/typescript-docker-multi-stage-build",
-  "main": "lib/server.js",
   "scripts": {
     "build": "rm -rf lib && tsc -p tsconfig.build.json",
     "format": "prettier --write '*.{yml,json,md}' '{src,test}/**/*'",
