@@ -11,11 +11,11 @@
   "scripts": {
     "build": "rm -rf lib && tsc -p tsconfig.build.json",
     "format": "prettier --write '*.{yml,json,md}' '{src,test}/**/*'",
+    "start": "node 'lib/server.js'",
+    "start:dev": "tsc-watch --p tsconfig.build.json --onSuccess 'node lib/server.js'",
+    "test": "jest --preset ts-jest",
     "prestart": "npm run build",
-    "prestart:watch": "npm run build",
-    "start": "node .",
-    "start:watch": "tsc-watch --onSuccess 'node .'",
-    "test": "jest --preset ts-jest"
+    "prestart:dev": "npm run build"
   },
   "dependencies": {
     "fastify": "2.7.1",
