@@ -1,13 +1,13 @@
 {
   "name": "greeting-service",
-  "version": "0.0.0",
   "description": "Greeting service",
   "author": "kevinpollet <pollet.kevin@gmail.com>",
+  "version": "0.0.0",
   "license": "MIT",
   "private": true,
-  "bugs": "https://github.com/kevinpollet/typescript-multistage-docker/issues",
-  "homepage": "https://github.com/kevinpollet/typescript-multistage-docker#readme",
-  "repository": "github:kevinpollet/typescript-multistage-docker",
+  "bugs": "https://github.com/kevinpollet/typescript-docker-multi-stage-build/issues",
+  "homepage": "https://github.com/kevinpollet/typescript-docker-multi-stage-build#readme",
+  "repository": "github:kevinpollet/typescript-docker-multi-stage-build",
   "main": "lib/server.js",
   "scripts": {
     "build": "rm -rf lib && tsc -p tsconfig.build.json",
