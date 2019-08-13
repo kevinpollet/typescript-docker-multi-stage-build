@@ -1,45 +1,46 @@
-# TypeScript ❤️ Docker multi-stage &middot; [![Build Status](https://travis-ci.com/kevinpollet/typescript-docker-multi-stage-build.svg?branch=master)](https://travis-ci.com/kevinpollet/typescript-docker-multi-stage-build) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
+# typescript-docker-multi-stage-build
 
-## Application
+The main purpose of this repository is to show how you can use the [Docker multi-stage][1] feature, available since Docker 17.05, to build a Node.js app written in TypeScript with Docker.
 
-This application is written in [TypeScript](https://www.typescriptlang.org/) and expose a REST endpoint to greet people by their name. Here is an example of a REST API call with [curl](https://github.com/curl/curl).
+## Starting the app
+
+1. Install dependencies: `npm install`
+2. Start the app: `npm start`
+3. Call the greeting endpoint:
 
 ```shell
-$ curl http://localhost:3000/greeting\?name\=Moby%20Dock
-
-{"message":"Hello Moby Dock!! . ><{{{o ______)"}
+$ curl http://localhost:3000/greeting\?name\=John
+{"id":"76ac792c-c1a9-4fc5-ba75-39652a06b381","message":"Hello, John!"}
 ```
 
-### npm scripts
+## Building the Docker image
 
-- `format`: Format files with [Prettier](https://prettier.io/)
-- `build`: Transpile TypeScript sources
-- `start`: Start app
-- `start:watch`: Start app with Hot Reload
-- `test`: Run tests with [Jest](https://jestjs.io/)
-
-## Build & Run Docker image
-
-Build the Docker image with the following command:
+To build the Docker image, use the `build` command:
 
 ```shell
 $ docker build . -t greeting-service:latest
 ```
 
-Multi-stage build process:
+To stop the build on a specific stage, use the `target` option in the `build` command:
 
-1. TypeScript application sources are transpiled and tested
-2. Transpiled application sources are copied in the final image
+```shell
+$ docker build --target builder -t greeting-service:latest .
+```
 
-> Read https://docs.docker.com/develop/develop-images/multistage-build/ for more details.
+## Running the Docker image
 
-Run the Docker image with the following command:
+To run the Docker image, use the `run` command:
 
 ```shell
 $ docker run -p 3000:3000 --rm greeting-service:latest
 ```
 
-Now you can call the running greeting service (see the [Application](#application) section for more details).
+Then, you can invoke the greeting service running in a Docker container with:
+
+```shell
+$ curl http://localhost:3000/greeting\?name\=Docker
+{"id":"7af0385b-99dc-4d47-a423-f6ab18ea7f1c","message":"Hello, Docker!"}
+```
 
 ## Contributing
 
@@ -50,3 +51,5 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for more information and how to get sta
 ## License
 
 [MIT](./LICENSE.md) © kevinpollet
+
+[1]: https://docs.docker.com/develop/develop-images/multistage-build/
