@@ -32,7 +32,7 @@
     "prettier": "1.18.2",
     "ts-jest": "24.0.2",
     "tsc-watch": "2.4.0",
-    "typescript": "3.5.3"
+    "typescript": "3.6.2"
   },
   "prettier": {
     "trailingComma": "es5"
