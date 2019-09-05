@@ -18,21 +18,21 @@
     "prestart:dev": "npm run build"
   },
   "dependencies": {
-    "fastify": "2.7.1",
+    "fastify": "2.8.0",
     "uuid": "3.3.3"
   },
   "devDependencies": {
     "@kevinpollet/tsconfig": "0.1.0",
     "@types/jest": "24.0.18",
-    "@types/node": "12.7.2",
+    "@types/node": "12.7.4",
     "@types/uuid": "3.4.5",
-    "husky": "3.0.4",
+    "husky": "3.0.5",
     "jest": "24.9.0",
     "lint-staged": "9.2.5",
     "prettier": "1.18.2",
     "ts-jest": "24.0.2",
-    "tsc-watch": "2.4.0",
-    "typescript": "3.5.3"
+    "tsc-watch": "3.0.0",
+    "typescript": "3.6.2"
   },
   "prettier": {
     "trailingComma": "es5"
