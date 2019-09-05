@@ -9,13 +9,15 @@
   "homepage": "https://github.com/kevinpollet/typescript-docker-multi-stage-build#readme",
   "repository": "github:kevinpollet/typescript-docker-multi-stage-build",
   "scripts": {
-    "build": "rm -rf lib && tsc -p tsconfig.build.json",
+    "clean": "rm -rf lib",
+    "build": "tsc -p tsconfig.build.json",
     "format": "prettier --write '*.{yml,json,md}' '{src,test}/**/*'",
     "start": "node 'lib/server.js'",
-    "start:dev": "tsc-watch --p tsconfig.build.json --onSuccess 'node lib/server.js'",
+    "start:dev": "tsc-watch -p tsconfig.build.json --onSuccess 'node lib/server.js'",
     "test": "jest --preset ts-jest",
+    "prebuild": "npm run clean",
     "prestart": "npm run build",
-    "prestart:dev": "npm run build"
+    "prestart:dev": "npm run clean"
   },
   "dependencies": {
     "fastify": "2.8.0",
