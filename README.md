@@ -1,4 +1,7 @@
-# typescript-docker-multi-stage-build &middot; [![Build Status](https://github.com/kevinpollet/typescript-docker-multi-stage-build/workflows/Build%20%26%20Test/badge.svg)](https://github.com/kevinpollet/typescript-docker-multi-stage-build/actions) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
+# typescript-docker-multi-stage-build
+
+[![Build Status](https://github.com/kevinpollet/typescript-docker-multi-stage-build/workflows/Build%20%26%20Test/badge.svg)][5]
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)][4]
 
 The purpose of this repository is to show how you can build a Docker image for a Node.js + TypeScript app with the [Docker multi-stage][1] feature, available since version 17.05.
 
@@ -15,7 +18,7 @@ $ curl http://localhost:3000/greeting\?name\=John
 
 ## Building the Docker image
 
-To build the Docker image, use the `build` command:
+To build the Docker image, use the `docker build` command:
 
 ```shell
 $ docker build . -t greeting-service:latest
@@ -29,7 +32,7 @@ $ docker build --target builder -t greeting-service:latest .
 
 ## Running the Docker image
 
-To run the Docker image, use the `run` command:
+To run the Docker image, use the `docker run` command:
 
 ```shell
 $ docker run -p 3000:3000 --rm greeting-service:latest
@@ -50,8 +53,10 @@ Submit an [issue][2] or a [pull request][3] if you want to contribute some code.
 
 ## License
 
-[MIT](./LICENSE.md) © kevinpollet
+[MIT][4] © kevinpollet
 
 [1]: https://docs.docker.com/develop/develop-images/multistage-build/
 [2]: https://github.com/kevinpollet/typescript-docker-multi-stage-build/issues/new
 [3]: https://github.com/kevinpollet/typescript-docker-multi-stage-build/pulls
+[4]: ./LICENSE.md
+[5]: https://github.com/kevinpollet/typescript-docker-multi-stage-build/actions
