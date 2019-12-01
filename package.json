@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@kevinpollet/tsconfig": "0.1.0",
-    "@types/jest": "24.0.21",
+    "@types/jest": "24.0.23",
     "@types/node": "12.12.14",
     "@types/uuid": "3.4.6",
     "husky": "3.1.0",
