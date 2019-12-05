@@ -5,7 +5,7 @@
 
 The purpose of this repository is to show how you can build a Docker image for a Node.js + TypeScript app with the [Docker multi-stage][1] feature, available since version 17.05.
 
-## Starting the app
+## Run the app
 
 1. Install dependencies: `npm install`
 2. Start the app: `npm start`
@@ -16,7 +16,7 @@ $ curl http://localhost:3000/greeting\?name\=John
 {"id":"76ac792c-c1a9-4fc5-ba75-39652a06b381","message":"Hello, John!"}
 ```
 
-## Building the Docker image
+## Build the Docker image
 
 To build the Docker image, use the `docker build` command:
 
@@ -30,7 +30,7 @@ To stop the build on a specific stage, use the `target` option:
 $ docker build --target builder -t greeting-service:latest .
 ```
 
-## Running the Docker image
+## Run the Docker image
 
 To run the Docker image, use the `docker run` command:
 
