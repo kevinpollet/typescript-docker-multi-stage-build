@@ -34,7 +34,7 @@
     "prettier": "1.19.1",
     "ts-jest": "24.2.0",
     "tsc-watch": "4.0.0",
-    "typescript": "3.7.2"
+    "typescript": "3.7.4"
   },
   "prettier": {
     "trailingComma": "es5"
