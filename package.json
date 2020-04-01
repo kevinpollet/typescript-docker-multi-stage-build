@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "fastify": "2.12.1",
-    "uuid": "7.0.2"
+    "uuid": "7.0.3"
   },
   "devDependencies": {
     "@kevinpollet/tsconfig": "0.1.0",
