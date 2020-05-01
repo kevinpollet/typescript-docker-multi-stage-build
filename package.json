@@ -30,7 +30,7 @@
     "@types/uuid": "7.0.0",
     "husky": "4.2.3",
     "jest": "25.1.0",
-    "lint-staged": "10.0.8",
+    "lint-staged": "10.2.1",
     "prettier": "1.19.1",
     "ts-jest": "25.2.1",
     "tsc-watch": "4.2.3",
