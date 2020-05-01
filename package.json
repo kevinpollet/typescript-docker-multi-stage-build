@@ -20,7 +20,7 @@
     "prestart:dev": "npm run clean"
   },
   "dependencies": {
-    "fastify": "2.12.1",
+    "fastify": "2.14.0",
     "uuid": "7.0.2"
   },
   "devDependencies": {
