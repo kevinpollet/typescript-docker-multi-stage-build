@@ -1,5 +1,4 @@
 import fastify from "fastify";
-
 import { GreetingService } from "./GreetingService";
 
 const greetingService = new GreetingService();
